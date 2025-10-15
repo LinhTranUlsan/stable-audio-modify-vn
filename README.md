@@ -2,6 +2,11 @@
 pip install stable-audio-tools  
 pip install .
 
+download the model_config.json and model.safetensors at https://huggingface.co/stabilityai/stable-audio-open-1.0/tree/main  
+after that, go to the "run_inference_midi10_15_4_branching3_backup.py" and change the path:  
+config_path = r'add your model_config path'  
+ckpt_path = r'add your model.safetensors path'  
+
 **Kiểm tra xem có GPU hay không:  
 Open Command Prompt (or PowerShell) and run:  
 nvidia-smi
