@@ -20,3 +20,21 @@ python -c "import torch; print(torch.__version__); print('CUDA available:', torc
 Còn không lỗi thì chạy lệnh này để xem kết quả:  
 python run_inference_midi10_15_4_branching3_backup.py
 
+
+# Generate all (branched + standalone + base)  
+python run_inference.py  
+# Skip standalone baseline generation  
+python run_inference.py --no-standalone  
+# Skip base reference  
+python run_inference.py --no-base  
+# Use cached prefix  
+python run_inference.py --use-cache  
+
+# Evaluate and compare  
+python evaluate_branching_results.py  
+
+1. Fréchet Audio Distance (FAD) - Kilgour et al. 2019 [1]  
+2. CLAP Score - Huang et al. 2023 [2]  
+3. Mel Cepstral Distortion (MCD) - Kubichek 1993 [3]  
+4. Multi-Scale Spectral Loss (MSS) - Défossez et al. 2023 [4]  
+5. SNR and SI-SNR  
