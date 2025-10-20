@@ -394,23 +394,42 @@ if __name__ == "__main__":
     print(f"[{datetime.now().strftime('%H:%M:%S')}] main [INFO]: Device: {args.device}")
     
     branches = [
+        # {
+        #     "name": "verse_piano",
+        #     "prompt": "Genre: Indie | Subgenre: Pop Rock, Indie Rock | Instruments: piano, drum machine, organ | Moods: soft, happy | Tempo: Medium",
+        #     "branched": "output_verse_piano_branched.wav",
+        #     "standalone": "output_verse_piano_standalone.wav"
+        # },
+        # {
+        #     "name": "verse_acoustic",
+        #     "prompt": "Genre: Folk | Subgenre: Indie Folk | Instruments: acoustic guitar, soft vocals, light percussion | Moods: intimate, warm | Tempo: Medium",
+        #     "branched": "output_verse_acoustic_branched.wav",
+        #     "standalone": "output_verse_acoustic_standalone.wav"
+        # },
+        # {
+        #     "name": "verse_electronic",
+        #     "prompt": "Genre: Electronic | Subgenre: Synth Pop | Instruments: synthesizer, electronic drums, bass synth | Moods: energetic, modern | Tempo: Fast",
+        #     "branched": "output_verse_electronic_branched.wav",
+        #     "standalone": "output_verse_electronic_standalone.wav"
+        # },
+        
         {
-            "name": "verse_piano",
-            "prompt": "Genre: Indie | Subgenre: Pop Rock, Indie Rock | Instruments: piano, drum machine, organ | Moods: soft, happy | Tempo: Medium",
-            "branched": "output_verse_piano_branched.wav",
+            "name": "piano",
+            "prompt": "Genre: Rock | Subgenre: Pop Rock, Indie Rock | Instruments: soft piano | Moods: soft| Tempo: Medium",
+            "branched": "output_soft_piano_branch.wav",
             "standalone": "output_verse_piano_standalone.wav"
         },
         {
-            "name": "verse_acoustic",
-            "prompt": "Genre: Folk | Subgenre: Indie Folk | Instruments: acoustic guitar, soft vocals, light percussion | Moods: intimate, warm | Tempo: Medium",
-            "branched": "output_verse_acoustic_branched.wav",
-            "standalone": "output_verse_acoustic_standalone.wav"
+            "name": "Cine_Orchestral",
+            "prompt": "Ensemble | Subgenre: Modern Orchestral | Instruments: string ensemble, soft piano, ambient percussion, brass swells | Moods: inspiring, epic, heartfelt, subtle | 125 BPM",
+            "branched": "output_Cinematic_Orchestral_branch.wav",
+            "standalone": "output_cinematic_orchestral_standalone.wav"
         },
         {
-            "name": "verse_electronic",
-            "prompt": "Genre: Electronic | Subgenre: Synth Pop | Instruments: synthesizer, electronic drums, bass synth | Moods: energetic, modern | Tempo: Fast",
-            "branched": "output_verse_electronic_branched.wav",
-            "standalone": "output_verse_electronic_standalone.wav"
+            "name": "Alter_Pop",
+            "prompt": "Format: Band | Subgenre: Dream Pop | Instruments: reverb guitars, synth layers, deep bass, gentle drums, airy vocals | Moods: emotional, nostalgic, soaring | 125 BPM",
+            "branched": "output_Alternative_Pop_branch.wav",
+            "standalone": "output_alternative_pop_standalone.wav"
         }
     ]
     
