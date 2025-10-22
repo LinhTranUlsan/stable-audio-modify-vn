@@ -17,17 +17,14 @@ python -c "import torch; print(torch.__version__); print('CUDA available:', torc
 
 
 
-Còn không lỗi thì chạy lệnh này để xem kết quả:  
-python run_inference_midi10_15_4_branching3_backup.py
-
-
+# Run the code by following the instruction below:
 # Generate all (branched + standalone + base)  
 python run_inference.py  
-# Skip standalone baseline generation  
+# Skip standalone baseline generation  (optional)
 python run_inference.py --no-standalone  
-# Skip base reference  
+# Skip base reference (optional)
 python run_inference.py --no-base  
-# Use cached prefix  
+# Use cached prefix  (optional)
 python run_inference.py --use-cache  
 
 # Evaluate and compare  

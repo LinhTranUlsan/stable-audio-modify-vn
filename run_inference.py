@@ -423,31 +423,58 @@ if __name__ == "__main__":
         print(f"[{datetime.now().strftime('%H:%M:%S')}] main [INFO]: - Seed: {args.seed}")
         
         base_prompt = "Format: Band | Genre: Rock | Subgenre: Indie Rock | Instruments: echoing electric guitars with chorus, \
-        well recorded drum-kit, Electric Bass, occasional soaring harmonies | Moving, Epic, Climactic| BPM: 125"
+                        well recorded drum-kit, Electric Bass, occasional soaring harmonies | Moving, Epic, Climactic| BPM: 125"
         
         branches = [
             {
-                "name": "verse_piano",
-                "prompt": "Genre: Indie | Subgenre: Pop Rock, Indie Rock | Instruments: piano, drum machine, organ | Moods: soft, happy | Tempo: Medium",
-                "output_branch": "output_verse_piano_branched.wav",
+                "name": "piano",
+                "prompt": "Genre: Rock | Subgenre: Pop Rock, Indie Rock | Instruments: soft piano | Moods: soft| Tempo: Medium",
+                "output_branch": "output_soft_piano_branch.wav",
                 "output_standalone": "output_verse_piano_standalone.wav",
-                "cfg_scale": 18.0
+                "cfg_scale": 10.0
             },
             {
-                "name": "verse_acoustic",
-                "prompt": "Genre: Folk | Subgenre: Indie Folk | Instruments: acoustic guitar, soft vocals, light percussion | Moods: intimate, warm | Tempo: Medium",
-                "output_branch": "output_verse_acoustic_branched.wav",
-                "output_standalone": "output_verse_acoustic_standalone.wav",
-                "cfg_scale": 18.0
+                "name": "Cine_Orchestral",
+                "prompt": "Ensemble | Subgenre: Modern Orchestral | Instruments: string ensemble, soft piano, ambient percussion, brass swells |\
+                        Moods: inspiring, epic, heartfelt, subtle | 125 BPM",
+                "output_branch": "output_Cinematic_Orchestral_branch.wav",
+                "output_standalone": "output_cinematic_orchestral_standalone.wav",
+                "cfg_scale": 10.0
             },
             {
-                "name": "verse_electronic",
-                "prompt": "Genre: Electronic | Subgenre: Synth Pop | Instruments: synthesizer, electronic drums, bass synth | Moods: energetic, modern | Tempo: Fast",
-                "output_branch": "output_verse_electronic_branched.wav",
-                "output_standalone": "output_verse_electronic_standalone.wav",
-                "cfg_scale": 18.0
+                "name": "Alter_Pop",
+                "prompt": "Format: Band | Subgenre: Dream Pop | Instruments: reverb guitars, synth layers, deep bass, gentle drums, airy vocals |\
+                        Moods: emotional, nostalgic, soaring | 125 BPM",
+                "output_branch": "output_Alternative_Pop_branch.wav",
+                "output_standalone": "output_alternative_pop_standalone.wav",
+                "cfg_scale": 10.0
             }
         ]
+            
+            
+            
+            # {
+            #     "name": "verse_piano",
+            #     "prompt": "Genre: Indie | Subgenre: Pop Rock, Indie Rock | Instruments: piano, drum machine, organ | Moods: soft, happy | Tempo: Medium",
+            #     "output_branch": "output_verse_piano_branched.wav",
+            #     "output_standalone": "output_verse_piano_standalone.wav",
+            #     "cfg_scale": 18.0
+            # },
+            # {
+            #     "name": "verse_acoustic",
+            #     "prompt": "Genre: Folk | Subgenre: Indie Folk | Instruments: acoustic guitar, soft vocals, light percussion | Moods: intimate, warm | Tempo: Medium",
+            #     "output_branch": "output_verse_acoustic_branched.wav",
+            #     "output_standalone": "output_verse_acoustic_standalone.wav",
+            #     "cfg_scale": 18.0
+            # },
+            # {
+            #     "name": "verse_electronic",
+            #     "prompt": "Genre: Electronic | Subgenre: Synth Pop | Instruments: synthesizer, electronic drums, bass synth | Moods: energetic, modern | Tempo: Fast",
+            #     "output_branch": "output_verse_electronic_branched.wav",
+            #     "output_standalone": "output_verse_electronic_standalone.wav",
+            #     "cfg_scale": 18.0
+            # }
+        # ]
         
         # Generate base audio (from base prompt)
         if not args.no_base:
